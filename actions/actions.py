@@ -25,7 +25,6 @@ class ActionHelloWorld(Action):
 
         return []
 
-
 class ActionConfirm(Action):
 
     def name(self) -> Text:

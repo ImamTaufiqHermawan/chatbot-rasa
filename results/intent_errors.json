@@ -1,0 +1,10 @@
+[
+  {
+    "text": "i want to book a bus ticket for three people",
+    "intent": "order",
+    "intent_prediction": {
+      "name": "bot_challenge",
+      "confidence": 0.9757674336433411
+    }
+  }
+]

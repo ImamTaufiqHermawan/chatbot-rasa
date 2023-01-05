@@ -13,6 +13,17 @@ entities:
   - service
   - p_count
 
+slots:
+- service: 
+  type: text
+  influence_converstaion: false
+- p_count:
+  type: unfeaturized
+  influence_converstaion: false
+
+actions:
+- action_confirm
+
 responses:
   utter_greet:
   - text: Hey! How are you?

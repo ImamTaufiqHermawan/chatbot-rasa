@@ -38,3 +38,8 @@ stories:
     - sevice: bus
     - p.count: '3'
   - action: test
+
+- story: entity slot
+  steps:
+  - intent: entity_extraction
+  - action: action_confirm

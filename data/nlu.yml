@@ -86,3 +86,8 @@ nlu:
 - intent: order
   examples: |
     - i want to book a [bus](sevice) ticket for [t]{"entity": "p.count", "value": "3"}hree people
+
+- intent: entity_extraction
+  examples: |
+    - I want to book a [flight](service) for [3](p_count) people
+    - book a [flight](service) for [9](count) people

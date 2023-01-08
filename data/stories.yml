@@ -43,3 +43,18 @@ stories:
   steps:
   - intent: entity_extraction
   - action: action_confirm
+
+# Pizza chatbot flow
+- story: request_order
+  steps:
+    - intent: greet
+    - action: utter_greet
+
+    - intent: request_init
+    - action: utter_pizza_menu
+
+    - intent: order_pizza
+    - action: action_pizza_order_form
+    
+    - intent: confirm
+    - action: utter_confirm

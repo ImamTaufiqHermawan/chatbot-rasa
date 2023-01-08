@@ -91,3 +91,29 @@ nlu:
   examples: |
     - I want to book a [flight](service) for [3](p_count) people
     - book a [flight](service) for [9](count) people
+
+# Pizza chatbot flow
+# Pizza Request
+- intent: request_init
+  examples: |
+    - I want to order a pizza
+    - I want pizza
+    - can you order a pizza for me
+    - pizza please
+    - pizza
+
+# Pizza order
+- intent: order_pizza
+  examples: |
+    - I want [two](pizza_amount) [small](pizza_slice) [Greek](pizza_type) pizza
+    - I want [one](pizza_amount) [medium](pizza_slice) [small](pizza_type) pizza
+    - I want [New York-Style](pizza_type) [medium](pizza_size) pizza
+    - [2](piece_amount) [large](pizza_size) [Greek](pizza_type) pizza
+    - Order [6](pizza_amount) [Greek](pizza_type) [large](pizza_size) pizza
+
+# Confirm
+- intent: confirm
+  examples: |
+    - yes make this order
+    - yes please
+    - please do first

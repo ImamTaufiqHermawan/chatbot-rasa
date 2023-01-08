@@ -9,9 +9,21 @@ intents:
   - mood_great
   - mood_unhappy
   - order
+  
+  # Pizza chatbot flow
+  - greet
+  - request_init
+  - order_pizza
+  - confirm
+
 entities:
   - service
   - p_count
+
+  # Pizza chatbot flow
+  - pizza_amount
+  - pizza_size
+  - pizza_type
 slots:
   service:
     type: text
@@ -23,10 +35,31 @@ slots:
     influence_conversation: false
     mappings:
     - type: custom
+  
+  # Pizza chatbot flow
+  pizza_size:
+    type: any
+    influence_conversation: false
+    mappings:
+    - type: custom
+  pizza_type:
+    type: any
+    influence_conversation: false
+    mappings:
+    - type: custom
+  pizza_amount:
+    type: any
+    influence_conversation: false
+    mappings:
+    - type: custom
+
 actions:
   - action_confirm
   - test
   - utter_greet
+  
+  # Pizza chatbot flow
+
 responses:
   utter_greet:
     - text: Hey! How are you?
@@ -41,6 +74,12 @@ responses:
     - text: Bye
   utter_iamabot:
     - text: I am a bot, powered by Rasa.
+
+  # Pizza chatbot flow
+  utter_pizza_menu:
+    - text: Yes Sir, We Have Greek pizza, and New York-Style Pizza Available in all different sizes i.e small, medium, large
+  utter_confirm:
+    - text: Sure !! We delivering your order ASAP. Have a nice day :)
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

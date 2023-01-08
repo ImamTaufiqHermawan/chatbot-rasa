@@ -38,20 +38,20 @@ slots:
   
   # Pizza chatbot flow
   pizza_size:
-    type: any
-    influence_conversation: false
+    type: text
     mappings:
-    - type: custom
+    - type: from_entity
+      entity: pizza_size
   pizza_type:
-    type: any
-    influence_conversation: false
+    type: text
     mappings:
-    - type: custom
+    - type: from_entity
+      entity: pizza_type
   pizza_amount:
     type: any
-    influence_conversation: false
     mappings:
-    - type: custom
+    - type: from_entity
+      entity: pizza_amount
 
 actions:
   - action_confirm
